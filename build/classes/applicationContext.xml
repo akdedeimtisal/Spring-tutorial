@@ -10,6 +10,7 @@
 	<!-- load the properties file sport.properties -->
 	<context:property-placeholder location="classpath:sport.properties"/>
 	
+	
     <!-- Define your beans here -->
     
     <!-- define the dependency -->
