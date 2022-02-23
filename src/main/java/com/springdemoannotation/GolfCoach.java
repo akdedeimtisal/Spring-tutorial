@@ -10,4 +10,10 @@ public class GolfCoach implements Coach {
 		return "do golf every day";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
