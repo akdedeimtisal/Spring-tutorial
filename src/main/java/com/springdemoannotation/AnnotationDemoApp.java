@@ -1,10 +1,12 @@
 package com.springdemoannotation;
 
+import java.io.FileNotFoundException;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnnotationDemoApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, Exception {
 		
 		//read spring config file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotation-applicationContext.xml");
@@ -13,7 +15,7 @@ public class AnnotationDemoApp {
 		//get the bean from spring container
 		Coach theCoach = context.getBean("tennisCoach", Coach.class);
 		
-		Coach golfCoach = context.getBean("golfCoach", Coach.class);
+	//	Coach golfCoach = context.getBean("golfCoach", Coach.class);
 		
 		//call a method on the bean
 		System.out.println(theCoach.getDailyWorkout());
