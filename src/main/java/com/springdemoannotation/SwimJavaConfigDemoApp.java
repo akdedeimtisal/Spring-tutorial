@@ -14,7 +14,7 @@ public class SwimJavaConfigDemoApp {
 		
 		
 		//get the bean from spring container
-		Coach theCoach = context.getBean("swimCoach", Coach.class);
+		SwimCoach theCoach = context.getBean("swimCoach", SwimCoach.class);
 		
 	//	Coach golfCoach = context.getBean("golfCoach", Coach.class);
 		
@@ -24,7 +24,12 @@ public class SwimJavaConfigDemoApp {
 		
 		//call method to get the daily fortune
 		System.out.println(theCoach.getDailyFortune());
-	
+		
+		// call swim coach methods
+		
+		System.out.println("email: " + theCoach.getEmail());
+		System.out.println("team: " + theCoach.getTeam());
+		
 		
 		//close the context
 		context.close();
